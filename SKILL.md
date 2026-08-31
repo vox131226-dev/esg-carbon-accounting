@@ -42,6 +42,17 @@ description: 中国化ESG、组织温室气体盘查、产品碳足迹、LCA、S
 4. `china-carbon-market`
    CEA、CCER、履约、配额、碳资产、减排项目识别、方法学适用性、项目可行性、开发风险与尽职调查。
 
+## 路由与必读资料
+
+| 路由 | 必读资料 | 中国项目或专项资料 |
+|---|---|---|
+| `corporate-ghg-inventory` | `references/corporate-ghg.md`、`references/data-quality-and-audit.md` | 中国因子任务读取 `references/china-emission-factors.md` |
+| `product-carbon-footprint` | `references/product-carbon-footprint.md`、`references/data-quality-and-audit.md` | 中国产品读取 `references/china-product-carbon-footprint.md` 和 `references/china-emission-factors.md` |
+| `esg-report-writer` | `references/esg-reporting.md`、`references/data-quality-and-audit.md` | 中国企业读取 `references/china-esg-regulation-2026.md` 和 `references/china-sustainability-disclosure-2026.md` |
+| `china-carbon-market` | `references/china-carbon-market.md`、`references/data-quality-and-audit.md` | 按CEA、CCER、林业、农业废弃物或地热项目读取对应中国专项资料 |
+
+只加载与当前任务有关的专项reference，不因知识包中存在某份文件就把其规则套用到无关任务。
+
 ## 中国规则时效检查（强制）
 
 处理中国项目时，在形成正式结论前必须检查规则状态：
@@ -51,11 +62,13 @@ description: 中国化ESG、组织温室气体盘查、产品碳足迹、LCA、S
 3. CCER项目先查看 `references/ccer-current-methodologies-2026.md`，再进入对应专项reference。
 4. 林业项目必须同时查看 `references/forestry-ccer-2026.md`。
 5. 猪场粪污或农业废弃物项目必须查看 `references/agriculture-waste-ccer.md`。
-6. 全国碳市场项目必须查看 `references/china-ets-2026.md`。
-7. 排放因子选择必须查看 `references/china-emission-factors.md`，并区分产品碳足迹、企业Scope 2、全国碳市场和CCER四类用途。
-8. 中国上市公司ESG报告必须查看 `references/china-esg-regulation-2026.md`。
-9. 产品碳足迹任务必须查看 `references/china-product-carbon-footprint.md`。
-10. reference中的日期是知识快照；正式业务仍需核验生态环境部、交易所及其他主管部门是否已有更新。
+6. 中深层地热能供暖项目必须查看 `references/geothermal-ccer-2026.md`。
+7. 全国碳市场项目必须查看 `references/china-ets-2026.md`。
+8. 排放因子选择必须查看 `references/china-emission-factors.md`，并区分产品碳足迹、企业Scope 2、全国碳市场和CCER四类用途。
+9. 中国上市公司ESG报告必须查看 `references/china-esg-regulation-2026.md`。
+10. 中国企业气候披露或可持续信息鉴证任务必须查看 `references/china-sustainability-disclosure-2026.md`。
+11. 产品碳足迹任务必须查看 `references/china-product-carbon-footprint.md`。
+12. reference中的日期是知识快照；正式业务仍需核验生态环境部、交易所及其他主管部门是否已有更新。
 
 ## 强制工作流
 
@@ -217,14 +230,31 @@ CCER项目评估必须核验：
 - `references/ccer-current-methodologies-2026.md`
 - `references/forestry-ccer-2026.md`
 - `references/agriculture-waste-ccer.md`
+- `references/geothermal-ccer-2026.md`
 - `references/china-ets-2026.md`
 - `references/china-emission-factors.md`
 - `references/china-product-carbon-footprint.md`
 - `references/china-esg-regulation-2026.md`
+- `references/china-sustainability-disclosure-2026.md`
 
 计算工具：
 - `scripts/calculate_ghg.py`
 - `scripts/calculate_pcf.py`
+
+知识维护工具：
+- `scripts/validate_references.py`
+- `scripts/build_gpt_knowledge.py`
+
+## 知识维护与发布
+
+更新政策、方法学、排放因子或监管规则时：
+
+1. 只把主管部门、交易所、标准发布机构等一手来源作为效力状态依据。
+2. 记录发布机构、文件编号、发布日期、生效日期、效力状态、官方链接和最后核验日期。
+3. 正式版、征求意见稿、编制说明和解读必须分别标注；新文件替代旧文件时明确废止或替代关系。
+4. 运行 `scripts/validate_references.py`，检查SKILL路由、孤立reference、来源链接和基准日期。
+5. 运行 `scripts/build_gpt_knowledge.py`，重新生成可上传到自定义GPT的知识包。
+6. 在企业碳盘查、产品碳足迹、ESG报告、CEA、CCER五类任务上执行回归测试后再发布。
 
 ## 最重要的原则
 

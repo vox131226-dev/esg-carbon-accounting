@@ -2,6 +2,8 @@
 
 中国化统一ESG与碳核算技能。
 
+当前版本：`2026.08.31.1`
+
 ## 核心能力
 
 - 企业温室气体盘查：Scope 1/2/3、GHG Protocol、ISO 14064-1
@@ -23,6 +25,8 @@
 - 2024年官方电力碳足迹因子及因子用途隔离
 - 中国产品碳足迹管理体系与因子数据库规则
 - 上交所、深交所、北交所可持续发展报告监管规则
+- 国家统一可持续披露准则、气候准则与可持续信息鉴证准则
+- 中深层地热能水热型供暖CCER储备项目评估
 
 ## 目录
 
@@ -40,14 +44,20 @@
 - `references/ccer-current-methodologies-2026.md`
 - `references/forestry-ccer-2026.md`
 - `references/agriculture-waste-ccer.md`
+- `references/geothermal-ccer-2026.md`
 - `references/china-ets-2026.md`
 - `references/china-emission-factors.md`
 - `references/china-product-carbon-footprint.md`
 - `references/china-esg-regulation-2026.md`
+- `references/china-sustainability-disclosure-2026.md`
 
 ### 计算工具
 - `scripts/calculate_ghg.py`
 - `scripts/calculate_pcf.py`
+- `scripts/validate_references.py`
+- `scripts/build_gpt_knowledge.py`
+
+构建脚本生成的 `assets/china-esg-carbon-accounting-knowledge.md` 可直接作为自定义GPT Knowledge知识包上传。
 
 ## 强制防错原则
 
