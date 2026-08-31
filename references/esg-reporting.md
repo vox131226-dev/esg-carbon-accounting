@@ -1,5 +1,11 @@
 # ESG与可持续发展报告编制参考
 
+- 更新基准日：2026-08-31
+- 适用范围：通用ESG、可持续发展和气候相关披露
+- 官方来源：
+  - https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/
+  - https://www.globalreporting.org/standards/
+
 ## 第一步：适用性识别
 先确定企业性质、上市地点、行业、报告年度和披露目的，再确定适用标准。不得机械套用所有框架。
 

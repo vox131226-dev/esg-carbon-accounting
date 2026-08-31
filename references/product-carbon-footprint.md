@@ -1,5 +1,12 @@
 # 产品碳足迹与LCA参考
 
+- 更新基准日：2026-08-31
+- 主要框架：ISO 14067、ISO 14040、ISO 14044
+- 官方来源：
+  - https://www.iso.org/standard/71206.html
+  - https://www.iso.org/standard/37456.html
+  - https://www.iso.org/standard/38498.html
+
 ## 标准基础
 
 以ISO 14067为产品碳足迹核心框架，并结合ISO 14040/14044生命周期评价原则。若存在PCR、产品种类规则、行业标准、客户规则或监管规则，应优先识别其强制要求。

@@ -1,5 +1,12 @@
 # 企业温室气体核算参考
 
+- 更新基准日：2026-08-31
+- 主要框架：GHG Protocol Corporate Standard、Scope 2 Guidance、Scope 3 Standard、ISO 14064-1
+- 官方来源：
+  - https://ghgprotocol.org/corporate-standard
+  - https://ghgprotocol.org/scope-2-guidance
+  - https://ghgprotocol.org/scope-3-calculation-guidance-2
+
 ## 核算层级
 
 ### Scope 1

@@ -1,5 +1,11 @@
 # 数据质量、审计与证据链
 
+- 更新基准日：2026-08-31
+- 适用范围：组织盘查、产品碳足迹、ESG披露和碳市场项目的底稿与证据链
+- 参考来源：
+  - https://ghgprotocol.org/corporate-standard
+  - https://ghgprotocol.org/standards-guidance
+
 ## 数据质量五维
 - 时间代表性
 - 地域代表性
