@@ -42,6 +42,21 @@ description: 中国化ESG、组织温室气体盘查、产品碳足迹、LCA、S
 4. `china-carbon-market`
    CEA、CCER、履约、配额、碳资产、减排项目识别、方法学适用性、项目可行性、开发风险与尽职调查。
 
+## 中国规则时效检查（强制）
+
+处理中国项目时，在形成正式结论前必须检查规则状态：
+
+1. 区分“正式有效”“已修订”“已废止”“征求意见稿”“编制说明”“专家解读”。
+2. 征求意见稿只能用于储备项目和政策趋势分析，不能作为正式登记、核证、披露或认证依据。
+3. CCER项目先查看 `references/ccer-current-methodologies-2026.md`，再进入对应专项reference。
+4. 林业项目必须同时查看 `references/forestry-ccer-2026.md`。
+5. 猪场粪污或农业废弃物项目必须查看 `references/agriculture-waste-ccer.md`。
+6. 全国碳市场项目必须查看 `references/china-ets-2026.md`。
+7. 排放因子选择必须查看 `references/china-emission-factors.md`，并区分产品碳足迹、企业Scope 2、全国碳市场和CCER四类用途。
+8. 中国上市公司ESG报告必须查看 `references/china-esg-regulation-2026.md`。
+9. 产品碳足迹任务必须查看 `references/china-product-carbon-footprint.md`。
+10. reference中的日期是知识快照；正式业务仍需核验生态环境部、交易所及其他主管部门是否已有更新。
+
 ## 强制工作流
 
 ### 第一步：明确任务与边界
@@ -80,12 +95,19 @@ description: 中国化ESG、组织温室气体盘查、产品碳足迹、LCA、S
 ### 第三步：因子选择
 
 排放因子遵循优先级：
-1. 中国主管部门、官方指南、官方电力排放因子
-2. 产品规则、行业标准、经认可数据库或供应商实测数据
-3. IPCC、DEFRA、EPA、Ember、EXIOBASE 等国际来源
-4. 支出法或其他估算法，仅在更高质量数据不可得时使用
+1. 项目用途所适用的中国强制监管规则、核算指南或方法学参数
+2. 国家温室气体排放因子数据库最新版和中国主管部门官方因子
+3. 产品规则、行业标准、经认可数据库或供应商实测数据
+4. IPCC、DEFRA、EPA、Ember、EXIOBASE 等国际来源
+5. 支出法或其他估算法，仅在更高质量数据不可得时使用
 
 所有因子必须记录：来源、年份、地域、单位、适用边界、是否含CH4/N2O、GWP版本。
+
+不得混用以下口径：
+- 产品碳足迹电力因子
+- 企业组织层面Scope 2因子
+- 全国碳市场监管核算参数
+- CCER方法学参数或基准线因子
 
 ### 第四步：计算
 
@@ -108,6 +130,7 @@ CO2e统一换算：
 - 重复计算检查
 - Scope归类检查
 - 因子地域适用性检查
+- 因子用途适用性检查
 - 缺失数据检查
 - 异常值检查
 - 关键排放源Top 5复核
@@ -133,6 +156,7 @@ CO2e统一换算：
 - 不得把缺少证据的数据写成确定事实
 - 对气候指标重点检查Scope 1、Scope 2、重大Scope 3、目标、基准年、减排进展、气候风险与机会、治理和财务影响
 - 对中国上市公司任务，优先核验交易所最新规则和行业适用性
+- 目标、承诺、规划、已完成业绩必须分开表述
 
 ## 中国碳市场规则
 
@@ -140,10 +164,12 @@ CO2e统一换算：
 - 强制碳市场配额资产
 - 自愿减排量资产
 - 项目减排量预测
-- 已签发减排量
-- 已登记、已交易或已注销资产
+- 已登记项目
+- 已核证/已登记减排量
+- 已交易或已注销资产
 
 CCER项目评估必须核验：
+- 方法学正式有效状态
 - 方法学适用条件
 - 项目边界
 - 额外性
@@ -160,7 +186,7 @@ CCER项目评估必须核验：
 
 若用户询问“项目能不能接”“是否可开发”“风险在哪里”，按以下顺序：
 1. 法律与权属
-2. 方法学适用性
+2. 方法学适用性和正式有效状态
 3. 技术可开发性
 4. 数据可得性
 5. 历史行为与追溯问题
@@ -180,21 +206,31 @@ CCER项目评估必须核验：
 
 ## 参考文件
 
-进一步规则见：
+基础规则：
 - `references/corporate-ghg.md`
 - `references/product-carbon-footprint.md`
 - `references/esg-reporting.md`
 - `references/china-carbon-market.md`
 - `references/data-quality-and-audit.md`
 
-计算工具见：
+中国化增强：
+- `references/ccer-current-methodologies-2026.md`
+- `references/forestry-ccer-2026.md`
+- `references/agriculture-waste-ccer.md`
+- `references/china-ets-2026.md`
+- `references/china-emission-factors.md`
+- `references/china-product-carbon-footprint.md`
+- `references/china-esg-regulation-2026.md`
+
+计算工具：
 - `scripts/calculate_ghg.py`
 - `scripts/calculate_pcf.py`
 
 ## 最重要的原则
 
-1. 官方中国因子优先于国外默认因子。
+1. 项目用途所适用的中国强制规则优先于通用国外默认规则。
 2. 当前政策、交易规则、方法学和电力排放因子属于时效性信息，正式项目必须核验最新版。
-3. 计算过程必须可以从结果追溯到活动数据和因子。
-4. 不确定性、估算值、缺失值必须显式标注。
-5. 任何拟用于第三方核查、认证、政府报送、交易或公开披露的结果，都要保留完整底稿和证据链。
+3. 征求意见稿不能当作正式业务依据。
+4. 计算过程必须可以从结果追溯到活动数据和因子。
+5. 不确定性、估算值、缺失值必须显式标注。
+6. 任何拟用于第三方核查、认证、政府报送、交易或公开披露的结果，都要保留完整底稿和证据链。
